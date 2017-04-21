@@ -1,0 +1,58 @@
+/* SESSION messages
+onclick?
+textarea
+
+!!!!!input type number valoare minima 0
+
+inpututl pentru title sa se adapateze numarului de caractere
+
+input[type=select]
+
+textarea {
+fix doar pe orizontala
+
+*/
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid darkgray;
+}
+
+th {
+    padding: 4px;
+    font-family: "Lucida Console";
+}
+
+td {
+    padding: 2px;
+    text-align: center;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type=submit] {
+    color: #00334d;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #00334d;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 17px;
+    transition-duration: 0,3s;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+}
