@@ -32,6 +32,6 @@ if(!$valid){
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     
-    $_SESSION["message"] = "Product added succesfully!";
+    $_SESSION["message"] = "Product added successfully!";
     header("Location: list.php");
 }
