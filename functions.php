@@ -2,13 +2,24 @@
 
 //dropdown branduri si afisare in ordine alfabetica
 function select_brand($watchBrand=''){
-    $brands = ["ZIIIRO", "Skagen", "Fossil", "Bergstern"];
-    asort($brands);
-    foreach($brands as $brand){
-        if($brand == $watchBrand){ //avem optiunea selectata
-            echo "<option value='$brand' selected>$brand</option>";
+    global $conn;
+
+    $sql = "SELECT * FROM watches_brand
+            ORDER BY name ASC";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+
+    $watches_brand = $stmt->fetchAll();
+
+    foreach($watches_brand as $brand){
+        //var_dump($brand);
+        //exit;
+
+
+        if($brand["name"] == $watchBrand){ //avem optiunea selectata
+            echo "<option value='" . $brand["name"] . "' selected>" . $brand["name"] . "</option>";
         } else {
-            echo "<option value='$brand'>$brand</option>" . "<br>";
+            echo "<option value='" . $brand["name"] . "'>" . $brand["name"] . "</option>";
         }
     }
 }

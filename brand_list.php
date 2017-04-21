@@ -1,6 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+    </head>
+<body>
+
 <?php
 
 require_once "dbconfig.php";
+require_once "functions.php";
+
 
 $sql = "SELECT * FROM watches_brand";
 $stmt = $conn->prepare($sql);
@@ -27,3 +36,5 @@ $watches_brand = $stmt->fetchAll();
     </tr>
     <?php endforeach ?>
 </table>
+</body>
+</html>
