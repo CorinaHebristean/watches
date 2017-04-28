@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href="style.css" rel="stylesheet">
-    </head>
-<body>
-
 <?php
 
-require_once "dbconfig.php";
-require_once "functions.php";
+include "header.php";
 
 
 $sql = "SELECT * FROM watches_brand";

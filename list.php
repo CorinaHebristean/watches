@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href="style.css" rel="stylesheet">
-    </head>
-<body>
-    
 <?php
-
-    require_once "dbconfig.php";
+    include "header.php";
 
     //pregatesc sql
 

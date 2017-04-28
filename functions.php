@@ -1,5 +1,14 @@
 <?php
 
+function is_loggedin() {
+    if (isset($_SESSION["logged_in"]) && 
+        $_SESSION["logged_in"] == 1) {
+            return true;
+        } 
+
+    return false;
+}
+
 //dropdown branduri si afisare in ordine alfabetica
 function select_brand($watchBrand=''){
     global $conn;
