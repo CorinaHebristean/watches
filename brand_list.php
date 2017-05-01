@@ -9,6 +9,11 @@ $stmt->execute();
 
 $watches_brand = $stmt->fetchAll();
 
+if(isset($_SESSION["message"]["brands"])) {
+    echo $_SESSION["message"]["brands"];
+    unset($_SESSION["message"]["brands"]);
+}
+
 ?>
 
 <p>

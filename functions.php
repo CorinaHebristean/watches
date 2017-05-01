@@ -24,7 +24,6 @@ function select_brand($watchBrand=''){
         //var_dump($brand);
         //exit;
 
-
         if($brand["name"] == $watchBrand){ //avem optiunea selectata
             echo "<option value='" . $brand["name"] . "' selected>" . $brand["name"] . "</option>";
         } else {
@@ -32,6 +31,7 @@ function select_brand($watchBrand=''){
         }
     }
 }
+
 //checkbox pentru selectare moneda
 function select_currency($watchCurrency=''){
     $currencies = ["USD", "GBP", "LEI", "EURO"];
@@ -88,3 +88,31 @@ function validate_watch_form() {
 
     return $valid;
 }
+
+//Validate brand form
+function validate_brand() {
+    $valid = 1;
+
+    if (empty($_POST["brand_name"])) {
+        $valid = 0;
+        $_SESSION["message"]["brand_name"] = "What brand is this?";
+    }
+
+    return $valid;
+}
+
+/*
+function value_validation($key) {
+    if (!empty($_POST[$key])) {
+        echo "value=" . $_SESSION[$key]; 
+        unset($_SESSION[$key]); 
+    }
+}
+*/
+
+//find total number of watches for a specific brand
+function count_watches(){
+    
+}
+
+

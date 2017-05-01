@@ -17,9 +17,16 @@ $price = $_POST["price"];
 $currency = $_POST["currency"];
 $stock = $_POST["stock"];
 
+//define values in session
+$_SESSION["brand"] = $brand;
+$_SESSION["title"] = $title;
+$_SESSION["description"] = $description;
+$_SESSION["price"] = $price;
+$_SESSION["currency"] = $currency;
+$_SESSION["stock"] = $stock;+
+
 // validate form
 $valid = validate_watch_form();
-
 
 if(!$valid){
     header("Location: add_product_form.php");

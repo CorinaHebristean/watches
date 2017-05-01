@@ -72,3 +72,7 @@ nav ul li {
 .clear {
     clear: both;
 }
+
+.table-actions {
+    width: 200px;
+}

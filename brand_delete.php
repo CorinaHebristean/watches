@@ -17,5 +17,5 @@ $sql = "DELETE FROM watches_brand
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 
-$_SESSION["message"] = "Brand with id $id was successfully deleted!";
+$_SESSION["message"]["brands"] = "Brand with id $id was successfully deleted!";
 header ("Location: brand_list.php");

@@ -1,14 +1,6 @@
 <?php
-    require_once "dbconfig.php"; 
-    require_once "functions.php";
-?>
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <link href="style.css" rel="stylesheet">
-    </head>
-<body>
-<?php
+
+include "header.php";
 
 $id = $_GET["id"];
 
