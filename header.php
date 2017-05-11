@@ -18,6 +18,10 @@
             <a href="brand_list.php">Brands</a>
         </li>
 
+        <li>
+            <a href="cart.php">My cart ( <?= calculate_total() ?> USD - <?= count( $_SESSION["cart"]) ?> products)</a>
+        </li>
+
         <?php if (!is_loggedin()): ?>
             <li>
                 <a href="user_login_form.php">Login</a>

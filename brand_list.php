@@ -24,6 +24,7 @@ if(isset($_SESSION["message"]["brands"])) {
     <tr>
         <th>ID</th>
         <th>Name</th>
+        <th>Nr. products</th>
         <th>Action</th>
     </tr>
 
@@ -31,6 +32,7 @@ if(isset($_SESSION["message"]["brands"])) {
     <tr>
         <td> <?= $brand["id"] ?> </td>
         <td> <?= $brand["name"] ?> </td>
+        <td> <?= count_products_by_brand($brand["name"]) ?> </td>
         <td>
             <a href="brand_edit.php?id=<?= $brand["id"]?>">Edit</a>
             <a href="brand_delete.php?id=<?= $brand["id"]?>">Delete</a>

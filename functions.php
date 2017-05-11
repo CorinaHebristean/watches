@@ -110,9 +110,60 @@ function value_validation($key) {
 }
 */
 
-//find total number of watches for a specific brand
-function count_watches(){
-    
+//count models
+// function count_models($key) { 
+//     if (count($key) < 2) {
+//         echo count($key) . " " . "model";
+//     } else {
+//         echo count($key) . " " . "models";
+//     }
+// }
+
+function count_models($key) 
+{ 
+    echo count($key) . " ";
+    echo (count($key) < 2) ? "model" : "models";
 }
 
+function count_products_by_brand($brand)
+{
+	global $conn;
+	
+	$sql = "SELECT * FROM watches
+			WHERE brand = '$brand'";
 
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
+
+	$watches = $stmt->fetchAll();
+
+	return count($watches) ;
+}
+
+// calculeaza totalul
+
+function calculate_total() 
+{
+    $cart = $_SESSION["cart"];
+
+    $total = 0;
+    foreach ($cart as $product){
+        $subtotal = $product["price"] * $product["q"];
+        $total = $total + $subtotal;
+    }
+
+    return $total;
+}
+
+//calculeaza produsele din cos
+function count_cart_products()
+{
+    $cart = $_SESSION["cart"];
+    $count = count($cart);
+
+    if ($count == 1) {
+        echo $count . " " . "product";
+    } else {
+        echo $count . " " . "products";
+    }
+}

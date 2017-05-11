@@ -16,7 +16,7 @@
     </p>
 
     <p> Description <br>
-        <textarea name="description" placeholder="Describe the product"></textarea>
+        <textarea class="textarea-dim" name="description" placeholder="Describe the product"></textarea>
         <?php session_message("description") ?>
 
     </p>

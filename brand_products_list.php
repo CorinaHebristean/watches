@@ -14,7 +14,7 @@ $watches = $stmt->fetchAll();
 
 ?>
 
-<h2><?= $brand ?> - <?= count($watches) ?> models </h2>
+<h2><?= $brand ?> watches: <?= count_models($watches) ?> </h2>
 
 <p>
     <a href="list.php">Go back to detailed list</a>

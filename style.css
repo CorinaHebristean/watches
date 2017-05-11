@@ -1,18 +1,3 @@
-/* SESSION messages
-onclick?
-textarea
-
-!!!!!input type number valoare minima 0
-
-inpututl pentru title sa se adapateze numarului de caractere
-
-input[type=select]
-
-textarea {
-fix doar pe orizontala
-
-*/
-
 table {
     border-collapse: collapse;
 }
@@ -61,12 +46,18 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    background-color: darkblue;
 }
 
 nav ul li {
     float: left;
     padding-right: 20px;
     text-transform: uppercase;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
 }
 
 .clear {
@@ -76,3 +67,10 @@ nav ul li {
 .table-actions {
     width: 200px;
 }
+
+/*nu functioneaza
+    .textarea-dim {
+    height: 50px;
+    width: 150px;
+}
+*/
